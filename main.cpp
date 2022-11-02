@@ -6,28 +6,39 @@ using namespace std;
 
 int main() {
 
-  struct car
+  struct
   {
-  int number;
-  int miles;
-  int gallons;
- } ;
+  double number[5];
+  float miles[5];
+  double gallons[5];
+ } car;
 
 
-  cout << " Enter car number: ";
-  cin >> car.number;
+for (int i = 0 ; i < 5; i++){
 
-  cout << " Enter miles driven: ";
-  cin >> car.miles;
+  cout << "Enter car number: ";
+  cin >> car.number[i];
+
+  cout << "Enter miles driven: ";
+  cin >> car.miles[i];
 
   cout << "Enter gallons: ";
-  cin >> car.gallons;
+  cin >> car.gallons[i];
 
   cout << " ------------------------------------------------------------";
 
-  cout << "\nCar number: " << " " << car.number << "\n" <<
-    "Gallons used: " << " " << car.miles << "\n" << 
-    "Miles driven: " << " " << car.gallons << endl;
+  double mph = (car.miles[i]) / (car.gallons[i]);
+
+  cout << "\nCar number: " << " " << car.number[i] << "\n"
+       << "Miles per Gallon: " << mph << endl;
+
+  cout << " ------------------------------------------------------------" << endl << endl;
+   
+    
+    
+    // "Gallons used: " << " " << car.miles[0] << "\n" << 
+   // "Miles driven: " << " " << car.gallons[0] << endl;
+  }
   
   
   
